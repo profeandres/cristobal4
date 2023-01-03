@@ -15,7 +15,7 @@ export const getNoticias = async (req,res) =>{
 export const getNoticia = async (req,res) =>{
     try {
         const {id} = req.params
-        const noticia = await Noticias.findOne(id)
+        const noticia = await Noticias.findById(id)
         if(!noticia) res.sendStatus(404)
         return res.json(noticia)
     } catch (error) {
