@@ -9,10 +9,10 @@ import {
 
 const router = Router();
 
-router.get("/noticias", getNoticias);
-router.get("/noticias/:id", getNoticia);
-router.post("/noticias", createNoticia);
-router.put("/noticias/:id", updateNoticia);
-router.delete("/noticias/:id", removeNoticia);
+router.get("/", getNoticias);
+router.get("/:id", getNoticia);
+router.post("/", createNoticia);
+router.put("/:id", updateNoticia);
+router.delete("/:id", removeNoticia);
 
 export default router;
