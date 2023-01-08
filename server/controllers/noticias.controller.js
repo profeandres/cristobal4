@@ -53,7 +53,7 @@ export const updateNoticia = async (req,res) =>{
             await removeImage(noticiaToUpdate.img_main.public_id)
             req.body.img_main={
                 public_id: result.public_id,
-                url: secure_url
+                url: result.secure_url
             }
         }
         const noticiaUpdated = await Noticias.findByIdAndUpdate(id, req.body,{new:true})
