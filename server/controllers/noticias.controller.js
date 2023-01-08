@@ -45,7 +45,7 @@ export const createNoticia = async (req,res) =>{
 export const updateNoticia = async (req,res) =>{
     try {
         const {id} = req.params
-        const noticiaToUpdate = await Noticias.findOne(id)
+        const noticiaToUpdate = await Noticias.findById(id)
         if(!noticiaToUpdate) res.sendStatus(404)
         if(req.files?.img_main){
             const result  = await uploadImage(req.files.img_main.tempFilePath)
